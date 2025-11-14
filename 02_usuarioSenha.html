@@ -6,11 +6,15 @@
     */
 
     //ENTRADA
-
-
+let nome = prompt("informe o nome de usuario")
+let senha = prompt("informe a senha")
     //PROCESSAMENTO
-
+while( nome === senha){
+    alert("usuario e senha não podem ser iguais")
+    nome = prompt("informe o nome de usuario")
+    senha = prompt("informe a senha")
+}
 
     //SAÍDA
-
+alert("voce foi cadastrado")
 </script>
