@@ -6,11 +6,18 @@
     */
 
     //ENTRADA
-
+    let senha = Number(prompt(`informe a senha`));
+    let senha2 = Number(prompt(`informe a senha novamente`));
 
     //PROCESSAMENTO
+    while (senha !== senha2) {
+        alert(`senha incorreta`)
+         senha = Number(prompt(`informe a senha`));
+         senha2 = Number(prompt(`informe a senha novamente`));
+    }
 
 
     //SAÍDA
+    alert(`senha correta`)
 
 </script>

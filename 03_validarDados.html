@@ -10,12 +10,31 @@
     Estado Civil: 's', 'c', 'v', 'd';
     */
 
-    //ENTRADA
-
+    let nome = prompt(`Insira seu nome`);
+    let idade = Number(prompt(`Insira sua idade`));
+    let sal = Number(prompt(`Insira seu salário`));
+    let sexo = prompt(`Informe seu sexo(F-M)`);
+    let civil = prompt(`Infome seu estado civil:(s,c,v,d)`);
 
     //PROCESSAMENTO
-
-
+    while (
+        nome.length < 3 ||
+        (idade < 0 &&
+            idade > 150) ||
+        sal < 0 ||
+        (sexo !== "f" &&
+            sexo !== "m") ||
+        (civil !== "s" && civil !== "c" &&
+            civil !== "v" &&
+            civil !== "d")
+    ) {
+        alert(`Existe um valor inváldo`);
+        nome = prompt(`Insira seu nome`);
+        idade = Number(`Insira sua idade`);
+        sal = Number(prompt(`Insira seu salário`));
+        sexo = prompt(`Informe seu Sex(F-M)`);
+        civil = prompt(`Infome seu estado civil:(s,c,v,d)`);
+    }
     //SAÍDA
 
 </script>
