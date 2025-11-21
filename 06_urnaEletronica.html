@@ -20,11 +20,54 @@
     */
 
     //ENTRADA
+    let votosJoaozinho = 0
+    let votosMariazinha = 0
+    let votosNulos = 0
+    let votosBrancos = 0
+    let totalVotos = 0
+    let voto
+
+
 
 
     //PROCESSAMENTO
 
+    //faça com if else e while
+    do {
+        if (voto === 1) {
+            votosJoaozinho++;
+            totalVotos++;
+        } else if (voto === 2) {
+            votosMariazinha++;
+            totalVotos++;
+        } else if (voto === 3) {
+            votosNulos++;
+            totalVotos++;
+        } else if (voto === 4) {
+            votosBrancos++;
+            totalVotos++;
+        }
+    } while (voto !== 0);
+    let porcentagemNulos = (votosNulos / totalVotos) * 100;
+    let porcentagemBrancos = (votosBrancos / totalVotos) * 100;
+    let vencedor;
+    if (votosJoaozinho > votosMariazinha) {
+        vencedor = "Joãozinho";
+    } else if (votosMariazinha > votosJoaozinho) {
+        vencedor = "Mariazinha";
+    } else {
+        vencedor = "Empate";
+    }
+
+
 
     //SAÍDA
+
+    document.write(`Votos Joãozinho:  ${votosJoaozinho} <br>`)
+    document.write(`Votos Mariazinha: ${votosMariazinha} <br>`)
+    document.write(`Porcentagem de votos nulos: ${porcentagemNulos.toFixed(2)}% <br>`)
+    document.write(`Porcentagem de votos brancos: ${porcentagemBrancos.toFixed(2)}% <br>`)
+    document.write(`Candidato vencedor: ${vencedor} <br>`)
+
 
 </script>
