@@ -5,11 +5,13 @@
     */
     
     //ENTRADA
-
-
+    let numero = Number(prompt(`Digite um número ( 0 serve pra parar):`));
+    let soma = 0;
     //PROCESSAMENTO
-
-
+    while (numero !== 0) {
+        soma += numero;
+        numero = Number(prompt(`Digite outro número ( 0 serve pra parar):`));
+    }
     //SAÍDA
-    
+    alert(`A soma total dos números inseridos é: ${soma}`);
 </script>
